@@ -1,19 +1,16 @@
 import sys
 
 def main():
+    total_sum = 0 
     numCases = int(sys.stdin.readline().rstrip())
     arr_list = [0]*numCases
     for i in range(0,numCases):
         arr_list[i] = int(sys.stdin.readline().rstrip())
+        total_sum+=arr_list[i]
 
     arr_list.sort()
-    
-    total_sum = 0
 
     #산술평균
-    for i in arr_list:
-        total_sum += i
-        
     average = total_sum/numCases
 
     if average>=0 :
